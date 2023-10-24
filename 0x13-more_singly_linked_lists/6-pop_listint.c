@@ -19,6 +19,7 @@ return (0);
 }
 nm = (*head)->n;
 ks = (*head)->next;
+free(*head);
 *head = ks;
 return (nm);
 }
