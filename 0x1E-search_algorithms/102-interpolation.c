@@ -21,11 +21,9 @@ if (array == NULL)
 return (-1);
 }
 
-while ((array[high] != array[low]) && (value >= array[low])
-        && (value <= array[high]))
+while ((array[high] != array[low]) && (value >= array[low]) && (value <= array[high]))
 {
-pos = low + (((double)(high - low) / (array[high] - array[low]))
-             * (value - array[low]));
+pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
 printf("Value checked array[%lu] = [%d]\n", pos, array[pos]);
 if (array[pos] < value)
 {
@@ -45,8 +43,7 @@ if (value == array[low])
 printf("Value checked array[%lu] = [%d]\n", low, array[low]);
 return (low);
 }
-pos = low + (((double)(high - low) / (array[high] - array[low]))
-             * (value - array[low]));
+pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
 printf("Value checked array[%lu] is out of range\n", pos);
 return (-1);
 }
